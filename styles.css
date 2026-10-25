@@ -211,6 +211,125 @@ footer span { margin-top: 3px; font-size: 12px; }
   footer { grid-template-columns: 1fr; align-items: start; }
 }
 
+/* Cellar discovery cards: every proof point offers a visual draw and a payoff. */
+.room-page .equipment-grid { gap: 12px; padding-top: 18px; }
+.room-page .equipment-grid article {
+  isolation: isolate;
+  min-height: 300px;
+  padding: 126px 20px 20px;
+  overflow: hidden;
+  border: 1px solid rgba(211,171,111,.28);
+  border-radius: 5px;
+  background: linear-gradient(145deg, rgba(58,17,25,.64), rgba(13,9,7,.92) 58%);
+  box-shadow: inset 0 1px rgba(255,231,190,.08), 0 14px 34px rgba(0,0,0,.24);
+  transition: transform 220ms ease, border-color 220ms ease, box-shadow 220ms ease;
+}
+.room-page .equipment-grid article:first-child { padding-left: 20px; }
+.room-page .equipment-grid article::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto;
+  width: auto;
+  height: 108px;
+  border: 0;
+  border-bottom: 1px solid rgba(220,174,104,.35);
+  border-radius: 0;
+  background-position: center;
+  background-size: cover;
+  filter: saturate(.82) contrast(1.08) brightness(.74);
+  transition: filter 240ms ease, transform 400ms ease;
+}
+.room-page .equipment-grid article:nth-child(1)::before { background-image: linear-gradient(180deg, transparent 30%, rgba(38,4,12,.78)), url('assets/images/press.jpg'); }
+.room-page .equipment-grid article:nth-child(2)::before { background-image: linear-gradient(180deg, transparent 30%, rgba(38,4,12,.78)), url('assets/images/tanks.jpg'); }
+.room-page .equipment-grid article:nth-child(3)::before { background-image: linear-gradient(180deg, transparent 30%, rgba(38,4,12,.78)), url('assets/images/facility.jpg'); }
+.room-page .equipment-grid article:nth-child(4)::before { background-image: linear-gradient(180deg, transparent 30%, rgba(38,4,12,.78)), url('assets/images/scale.jpg'); }
+.room-page .equipment-grid article::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background: linear-gradient(112deg, transparent 28%, rgba(255,217,171,.13) 43%, rgba(126,10,42,.25) 52%, transparent 68%);
+  transform: translateX(-120%);
+  transition: transform 650ms ease;
+}
+.room-page .equipment-grid article:hover,
+.room-page .equipment-grid article:focus-within {
+  transform: translateY(-5px);
+  border-color: rgba(222,173,101,.66);
+  box-shadow: inset 0 1px rgba(255,231,190,.12), 0 20px 42px rgba(23,0,7,.48), 0 0 24px rgba(119,8,38,.18);
+}
+.room-page .equipment-grid article:hover::before { filter: saturate(1.05) contrast(1.08) brightness(.92); transform: scale(1.035); }
+.room-page .equipment-grid article:hover::after { transform: translateX(120%); }
+.room-page .equipment-grid h3 { margin: 18px 0 9px; }
+.equipment-reward {
+  display: inline-flex;
+  margin-top: 16px;
+  padding: 7px 10px;
+  color: #f4c978;
+  border: 1px solid rgba(221,170,91,.38);
+  border-radius: 999px;
+  background: rgba(91,8,31,.38);
+  font: 700 10px/1.2 var(--body);
+  letter-spacing: .055em;
+  text-transform: uppercase;
+}
+
+/* A slow cabernet glimmer unifies the cellar without obscuring content. */
+.room-page::after {
+  content: "";
+  position: fixed;
+  inset: -30%;
+  z-index: 20;
+  pointer-events: none;
+  opacity: .28;
+  background:
+    radial-gradient(ellipse at 16% 28%, rgba(143,12,47,.22), transparent 24%),
+    radial-gradient(ellipse at 82% 66%, rgba(101,8,34,.18), transparent 27%),
+    linear-gradient(112deg, transparent 38%, rgba(236,119,139,.08) 48%, rgba(106,8,39,.13) 52%, transparent 62%);
+  mix-blend-mode: screen;
+  animation: wine-glimmer 16s ease-in-out infinite alternate;
+}
+.room-page .button,
+.room-page .varieties li,
+.room-page .equipment-reward { position: relative; overflow: hidden; }
+.room-page .button::after,
+.room-page .equipment-reward::after {
+  content: "";
+  position: absolute;
+  inset: -80% -35%;
+  pointer-events: none;
+  background: linear-gradient(105deg, transparent 42%, rgba(255,236,209,.3) 49%, transparent 57%);
+  transform: translateX(-80%);
+  animation: reward-glint 7s ease-in-out infinite;
+}
+@keyframes wine-glimmer {
+  0% { transform: translate3d(-3%, -2%, 0) rotate(-2deg); opacity: .16; }
+  55% { opacity: .3; }
+  100% { transform: translate3d(4%, 3%, 0) rotate(2deg); opacity: .24; }
+}
+@keyframes reward-glint {
+  0%, 72% { transform: translateX(-80%); opacity: 0; }
+  80% { opacity: .8; }
+  92%, 100% { transform: translateX(80%); opacity: 0; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .room-page::after,
+  .room-page .button::after,
+  .room-page .equipment-reward::after { animation: none; }
+  .room-page .equipment-grid article,
+  .room-page .equipment-grid article::before,
+  .room-page .equipment-grid article::after { transition: none; }
+}
+@media (max-width: 700px) {
+  .room-page .equipment-grid { gap: 8px; padding-top: 10px; }
+  .room-page .equipment-grid article,
+  .room-page .equipment-grid article:first-child { min-height: 242px; padding: 92px 11px 14px; }
+  .room-page .equipment-grid article::before { right: 0; height: 78px; }
+  .room-page .equipment-grid h3 { margin-top: 12px; }
+  .equipment-reward { margin-top: 10px; padding: 6px 7px; font-size: 8px; }
+}
+
 /* Desktop cellar stage: keep the complete welcome card in one viewport. */
 @media (min-width: 901px) {
   .room-home .hero.room-stage {
