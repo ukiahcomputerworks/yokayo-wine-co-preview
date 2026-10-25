@@ -211,6 +211,33 @@ footer span { margin-top: 3px; font-size: 12px; }
   footer { grid-template-columns: 1fr; align-items: start; }
 }
 
+/* Desktop cellar stage: keep the complete welcome card in one viewport. */
+@media (min-width: 901px) {
+  .room-home .hero.room-stage {
+    min-height: calc(100svh - 64px);
+    max-height: calc(100svh - 64px);
+    padding: clamp(14px, 1.5vw, 24px);
+  }
+  .room-home .hero-copy {
+    width: min(580px, 38vw);
+    max-height: calc(100svh - 112px);
+    padding: clamp(28px, 3vw, 46px);
+  }
+  .room-home .hero-copy .eyebrow { margin-bottom: 18px; }
+  .room-home .hero-copy h1 {
+    font-size: clamp(58px, 5vw, 82px);
+    line-height: .84;
+  }
+  .room-home .hero-deck {
+    max-width: 500px;
+    margin-top: 16px;
+    font-size: clamp(15px, 1.05vw, 18px);
+    line-height: 1.34;
+  }
+  .room-home .hero-actions { margin-top: 16px; gap: 12px 20px; }
+  .room-home .hero-actions .button { min-height: 44px; padding: 9px 18px; }
+}
+
 /* Generated cellar placards: dimensional oak and brass service controls. */
 .room-page .route a {
   position: relative;
