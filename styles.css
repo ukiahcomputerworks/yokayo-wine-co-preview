@@ -211,6 +211,47 @@ footer span { margin-top: 3px; font-size: 12px; }
   footer { grid-template-columns: 1fr; align-items: start; }
 }
 
+/* Shared room transition geometry: every inner-page card lands at one anchor. */
+@media (min-width: 701px) {
+  .room-page:not(.room-home) .page-hero.room-stage {
+    min-height: 0;
+    align-items: flex-start;
+    padding: 32px 40px 28px;
+  }
+  .room-page:not(.room-home) .page-hero-copy {
+    align-self: flex-start;
+    width: min(1080px, calc(100vw - 80px));
+    max-width: none;
+    min-height: 0;
+    padding: 38px 56px 40px;
+  }
+  .room-page:not(.room-home) .page-hero h1 {
+    font-size: clamp(54px, 6vw, 88px);
+    line-height: .94;
+  }
+  .room-page:not(.room-home) .page-hero-copy > p:last-child {
+    max-width: 900px;
+    margin-top: 18px;
+    font-size: clamp(17px, 1.6vw, 22px);
+  }
+}
+@media (max-width: 700px) {
+  .room-page:not(.room-home) .page-hero.room-stage {
+    min-height: 0;
+    align-items: flex-start;
+    padding: 12px;
+  }
+  .room-page:not(.room-home) .page-hero-copy {
+    align-self: flex-start;
+    width: 100%;
+    min-height: 0;
+    padding: 26px 20px 28px;
+  }
+  .room-page:not(.room-home) .page-hero h1 { font-size: clamp(42px, 13vw, 60px); }
+  .room-page:not(.room-home) .page-hero-copy > p:last-child { margin-top: 14px; font-size: 16px; }
+  .room-page:not(.room-home) .room-marker { display: none; }
+}
+
 /* Cellar discovery cards: every proof point offers a visual draw and a payoff. */
 .room-page .equipment-grid { gap: 12px; padding-top: 18px; }
 .room-page .equipment-grid article {
