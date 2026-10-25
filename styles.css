@@ -213,11 +213,17 @@ footer span { margin-top: 3px; font-size: 12px; }
 
 /* Virtual cellar: each route is a room, not a slideshow. */
 .entry-door {
-  position: relative;
-  min-height: 100svh;
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
   background: #090706 url('assets/images/cellar/main-entrance.jpg') center / cover no-repeat;
   box-shadow: inset 0 -90px 110px rgba(0,0,0,.52);
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 420ms ease, visibility 420ms ease;
 }
+.entry-door.is-opening { opacity: 0; visibility: hidden; pointer-events: none; }
+.splash-active { overflow: hidden; }
 .entry-sign {
   position: absolute;
   left: 30.5%;
@@ -229,6 +235,8 @@ footer span { margin-top: 3px; font-size: 12px; }
   justify-content: center;
   padding-bottom: 8px;
   color: #f4dec0;
+  background: transparent;
+  border: 0;
   border-radius: 10px;
   text-decoration: none;
   cursor: pointer;
@@ -363,7 +371,7 @@ footer span { margin-top: 3px; font-size: 12px; }
 .room-page .content-body { background: rgba(18, 14, 11, .44); }
 
 @media (max-width: 700px) {
-  .entry-door { min-height: 100svh; background-position: 49% center; }
+  .entry-door { background-position: 49% center; }
   .entry-sign { left: 25%; top: 21%; width: 55%; height: 29%; }
   .entry-sign span { font-size: 8px; padding: 6px 8px; }
   .room-page { background-attachment: scroll; }

@@ -14,3 +14,16 @@ nav?.addEventListener('click', (event) => {
   }
 });
 
+const entryDoor = document.querySelector('.entry-door');
+const enterCellar = document.querySelector('[data-enter-cellar]');
+
+enterCellar?.addEventListener('click', () => {
+  entryDoor?.classList.add('is-opening');
+  document.body.classList.remove('splash-active');
+
+  window.setTimeout(() => {
+    entryDoor?.setAttribute('hidden', '');
+    document.querySelector('.site-header a')?.focus({ preventScroll: true });
+  }, 420);
+});
+
