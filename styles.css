@@ -211,6 +211,68 @@ footer span { margin-top: 3px; font-size: 12px; }
   footer { grid-template-columns: 1fr; align-items: start; }
 }
 
+/* Numbered cellar-directory panels, inspired by the Brooktrails navigation rhythm. */
+.room-page .content-index {
+  display: grid;
+  align-content: start;
+  gap: 10px;
+  padding: 0 28px 0 0;
+}
+.room-page .content-index > strong {
+  margin: 0 0 6px;
+  color: #e2b66f;
+  font: 800 12px/1 var(--body);
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+.room-page .content-index > a {
+  position: relative;
+  display: grid;
+  grid-template-columns: 34px minmax(0,1fr);
+  gap: 12px;
+  align-items: center;
+  min-height: 72px;
+  padding: 11px 22px 11px 12px;
+  color: #f5e9dc;
+  border: 1px solid rgba(211,171,111,.34);
+  background: linear-gradient(110deg, rgba(73,20,32,.76), rgba(21,13,11,.72));
+  clip-path: polygon(0 0, calc(100% - 14px) 0, 100% 14px, 100% 100%, 0 100%);
+  text-decoration: none;
+  transition: transform 180ms ease, border-color 180ms ease, background 180ms ease, box-shadow 180ms ease;
+}
+.room-page .content-index > a::after {
+  content: "";
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 4px;
+  background: #b52f4c;
+  transform: scaleY(.35);
+  transition: transform 180ms ease, background 180ms ease;
+}
+.room-page .content-index > a:hover,
+.room-page .content-index > a:focus-visible {
+  color: white;
+  border-color: rgba(235,191,119,.8);
+  background: linear-gradient(110deg, rgba(111,24,46,.92), rgba(28,15,11,.88));
+  box-shadow: 0 10px 24px rgba(32,0,9,.34), inset 0 1px rgba(255,234,196,.08);
+  transform: translateX(5px);
+}
+.room-page .content-index > a:hover::after,
+.room-page .content-index > a:focus-visible::after { transform: scaleY(1); background: #e2b66f; }
+.index-number { color: #e2b66f; font: 800 11px/1 var(--mono); letter-spacing: .08em; }
+.room-page .content-index b { display: block; font: 700 16px/1.1 var(--body); }
+.room-page .content-index small { display: block; margin-top: 5px; color: #b9a99a; font: 500 11px/1.25 var(--body); }
+.room-page .content-index > a:hover small,
+.room-page .content-index > a:focus-visible small { color: #e2d6ca; }
+@media (max-width: 920px) {
+  .room-page .content-index { grid-template-columns: 1fr 1fr; padding: 0 0 24px; }
+  .room-page .content-index > strong { grid-column: 1 / -1; }
+}
+@media (max-width: 520px) {
+  .room-page .content-index { grid-template-columns: 1fr; }
+  .room-page .content-index > a { min-height: 64px; }
+}
+
 /* Shared room transition geometry: every inner-page card lands at one anchor. */
 @media (min-width: 701px) {
   .room-page:not(.room-home) .page-hero.room-stage {
