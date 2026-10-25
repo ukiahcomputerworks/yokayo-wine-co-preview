@@ -261,7 +261,7 @@ footer span { margin-top: 3px; font-size: 12px; }
 }
 .room-page .equipment-grid article:hover::before { filter: saturate(1.05) contrast(1.08) brightness(.92); transform: scale(1.035); }
 .room-page .equipment-grid article:hover::after { transform: translateX(120%); }
-.room-page .equipment-grid h3 { margin: 18px 0 9px; }
+.room-page .equipment-grid h3 { margin: 0 0 9px; }
 .equipment-reward {
   display: inline-flex;
   margin-top: 16px;
@@ -326,7 +326,7 @@ footer span { margin-top: 3px; font-size: 12px; }
   .room-page .equipment-grid article,
   .room-page .equipment-grid article:first-child { min-height: 242px; padding: 92px 11px 14px; }
   .room-page .equipment-grid article::before { right: 0; height: 78px; }
-  .room-page .equipment-grid h3 { margin-top: 12px; }
+  .room-page .equipment-grid h3 { margin-top: 0; }
   .equipment-reward { margin-top: 10px; padding: 6px 7px; font-size: 8px; }
 }
 
