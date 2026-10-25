@@ -6,11 +6,16 @@
   <meta name="description" content="Yokayo Wine Company provides custom crush, winemaking, vineyard sourcing, and storage services in California's North Coast.">
   <meta name="robots" content="noindex, nofollow">
   <title>Yokayo Wine Company | Wine Production, Built to Move</title>
-  <link rel="stylesheet" href="styles.css?v=20261023-6">
+  <link rel="stylesheet" href="styles.css?v=20261025-1">
 <link rel="stylesheet" href="assets/cwu-colophon.css" data-cwu-colophon="true">
 </head>
-<body>
+<body class="room-page room-home" style="--room-image: url('assets/images/cellar/main-entrance.jpg')">
   <a class="skip-link" href="#main">Skip to content</a>
+  <section class="entry-door" aria-label="Yokayo Wine Company cellar entrance">
+    <a class="entry-sign" href="#inside" aria-label="Click the Yokayo Wines sign to enter the cellar">
+      <span>Click the sign to enter</span>
+    </a>
+  </section>
   <header class="site-header">
     <a class="brand" href="./" aria-label="Yokayo Wine Company home">
       <img src="assets/images/logo.svg" alt="Yokayo Wine Company">
@@ -26,7 +31,7 @@
   </header>
 
   <main id="main">
-    <section class="hero" id="top" aria-labelledby="hero-title">
+    <section class="hero room-stage" id="inside" aria-labelledby="hero-title" style="--room-image: url('assets/images/cellar/cellar-straight.jpg')">
       <div class="hero-copy">
         <p class="eyebrow"><span>Inside the cellar</span><span>Ukiah, California</span></p>
         <h1 id="hero-title">Where wine<br><em>finds its form.</em></h1>
@@ -37,18 +42,7 @@
         </div>
       </div>
 
-      <figure class="hero-image cellar-tour" aria-labelledby="cellar-view-label">
-        <img id="cellar-view" src="assets/images/cellar/main-entrance.jpg" alt="Stone entrance looking into the Yokayo wine cellar">
-        <figcaption id="cellar-view-label"><span>Cellar panorama</span><span aria-live="polite">Outside looking in</span></figcaption>
-        <div class="cellar-controls" role="group" aria-label="Choose a cellar viewpoint">
-          <button class="is-active" type="button" data-cellar-view data-src="assets/images/cellar/main-entrance.jpg" data-alt="Stone entrance looking into the Yokayo wine cellar" data-label="Outside looking in">Outside</button>
-          <button type="button" data-cellar-view data-src="assets/images/cellar/cellar-straight.jpg" data-alt="Looking straight toward the far wall of the wine cellar" data-label="Far cellar wall">Forward</button>
-          <button type="button" data-cellar-view data-src="assets/images/cellar/cellar-left.jpg" data-alt="Left-hand view inside the barrel cellar" data-label="Cellar left">Left</button>
-          <button type="button" data-cellar-view data-src="assets/images/cellar/cellar-right.jpg" data-alt="Right-hand view inside the bottle and barrel cellar" data-label="Cellar right">Right</button>
-          <button type="button" data-cellar-view data-src="assets/images/cellar/cellar-exit.jpg" data-alt="Looking from inside the cellar toward the exit" data-label="Looking toward the exit">Exit</button>
-          <button type="button" data-cellar-view data-src="assets/images/cellar/back-entrance.jpg" data-alt="Rear stone entrance descending into the wine cellar" data-label="Rear entrance">Rear</button>
-        </div>
-      </figure>
+      <div class="room-presence" aria-hidden="true"><span>Enter Yokayo</span><span>Ukiah cellar</span></div>
     </section>
 
     <section class="proof-strip" aria-label="Facility highlights">
