@@ -524,7 +524,7 @@ footer span { margin-top: 3px; font-size: 12px; }
   background-image: linear-gradient(90deg, rgba(12,6,4,.58), rgba(12,6,4,.1), rgba(12,6,4,.58)), var(--route-art);
   border-color: transparent;
   filter: saturate(1.04) brightness(1.12) drop-shadow(0 11px 18px rgba(0,0,0,.62)) drop-shadow(0 0 10px rgba(218,174,102,.34));
-  transform: translateY(-3px) scale(1.015);
+  transform: none;
 }
 .room-page .route a:focus-visible { outline: 2px solid #efc87e; outline-offset: 4px; }
 
