@@ -1232,3 +1232,45 @@ footer { padding-top: 15px; padding-bottom: 15px; }
   .cellar-controls button { min-height: 30px; font-size: 8px; }
 }
 
+/* Final density pass: content, not decorative gutters, determines section height. */
+.room-page .proof-strip,
+.room-page .route-section,
+.room-page .facility,
+.room-page .fruit,
+.room-page .family,
+.room-page .contact,
+.room-page .content-layout {
+  max-width: none;
+  padding: clamp(12px, 1.5vw, 24px);
+}
+.room-page .proof-strip { padding-block: 8px; }
+.room-page .route-section { gap: clamp(14px, 2vw, 28px); }
+.room-page .section-intro { padding-right: clamp(12px, 2vw, 28px); }
+.room-page .facility-title { padding-bottom: 14px; }
+.room-page .equipment-grid { padding-top: 8px; }
+.room-page .fruit { gap: clamp(14px, 2vw, 28px); }
+.room-page .source-image { padding: 6px; }
+.room-page .family { gap: clamp(10px, 1.5vw, 20px); }
+.room-page .contact h2 { font-size: clamp(46px, 6vw, 82px); }
+.room-page .contact > p:not(.eyebrow) { margin-top: 10px; }
+.room-page .contact-actions { margin-top: 12px; }
+.room-page .content-index { padding-right: 18px; }
+.room-page .content-body { padding-left: clamp(18px, 3vw, 42px); }
+.room-page .action-band { padding: 10px clamp(12px, 1.5vw, 24px); }
+
+@media (max-width: 700px) {
+  .room-page .proof-strip,
+  .room-page .route-section,
+  .room-page .facility,
+  .room-page .fruit,
+  .room-page .family,
+  .room-page .contact,
+  .room-page .content-layout { padding: 10px; }
+  .room-page .section-intro { padding: 0 0 12px; }
+  .room-page .facility-title { padding-bottom: 10px; }
+  .room-page .fruit,
+  .room-page .family { gap: 10px; }
+  .room-page .content-index { padding: 0 0 12px; }
+  .room-page .content-body { padding: 16px 0 0; }
+}
+
