@@ -1430,3 +1430,44 @@ footer { padding-top: 15px; padding-bottom: 15px; }
   .room-page.primary-room .page-hero.room-stage { padding: 4px; }
 }
 
+/* Photoreal bottle asset with live accessible label text. */
+.room-page nav .nav-cta {
+  width: 270px;
+  min-width: 270px;
+  min-height: 68px;
+  margin-right: 0;
+  padding: 0 112px 0 49px;
+  justify-content: center;
+  color: #2a1210;
+  background: url('assets/images/button-wine-bottle.png') center / 270px auto no-repeat;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  font-size: 8.5px;
+  line-height: 1;
+  text-align: center;
+  text-shadow: 0 1px rgba(255,255,255,.45);
+  white-space: nowrap;
+  filter: drop-shadow(0 7px 9px rgba(0,0,0,.45));
+}
+.room-page nav .nav-cta::before,
+.room-page nav .nav-cta::after { display: none; }
+.room-page nav .nav-cta:hover,
+.room-page nav .nav-cta:focus-visible {
+  color: #2a1210;
+  background: url('assets/images/button-wine-bottle.png') center / 270px auto no-repeat;
+  border: 0;
+  box-shadow: none;
+  filter: saturate(1.08) brightness(1.08) drop-shadow(0 8px 13px rgba(94,17,34,.55)) drop-shadow(0 0 8px rgba(226,182,111,.24));
+}
+
+@media (max-width: 700px) {
+  .room-page nav .nav-cta {
+    width: 270px;
+    min-width: 270px;
+    min-height: 68px;
+    margin: 6px 0;
+    padding: 0 112px 0 49px;
+  }
+}
+
