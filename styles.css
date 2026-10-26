@@ -1347,3 +1347,70 @@ footer { padding-top: 15px; padding-bottom: 15px; }
   .page-winemaking .content-body .fact-grid span { font-size: 8px; }
 }
 
+/* The primary conversation control is a horizontal cellar bottle. */
+.room-page nav .nav-cta {
+  position: relative;
+  isolation: isolate;
+  min-width: 214px;
+  min-height: 52px;
+  margin-right: 32px;
+  padding: 0 24px;
+  justify-content: center;
+  color: #291016;
+  background:
+    linear-gradient(90deg, transparent 0 10%, #ead09a 10% 88%, transparent 88%) center / 100% 68% no-repeat,
+    linear-gradient(180deg, #7a2638, #3c111d 72%);
+  border: 2px solid #9f5360;
+  border-radius: 28px 12px 12px 28px;
+  box-shadow: inset 0 4px rgba(255,255,255,.07), inset 0 -5px rgba(0,0,0,.18), 0 7px 18px rgba(0,0,0,.38);
+  font-weight: 800;
+  letter-spacing: .02em;
+}
+.room-page nav .nav-cta::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 50%;
+  right: -27px;
+  width: 30px;
+  height: 24px;
+  translate: 0 -50%;
+  background: linear-gradient(180deg, #5b1828, #2d0d15 70%);
+  border: 2px solid #8d4b50;
+  border-left: 0;
+  border-radius: 0 5px 5px 0;
+  box-shadow: inset 0 4px rgba(255,255,255,.06);
+}
+.room-page nav .nav-cta::before {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  right: -34px;
+  width: 8px;
+  height: 30px;
+  translate: 0 -50%;
+  background: linear-gradient(180deg, #c58b50, #7e4726);
+  border: 1px solid #e0b273;
+  border-radius: 2px 4px 4px 2px;
+}
+.room-page nav .nav-cta:hover,
+.room-page nav .nav-cta:focus-visible {
+  color: #260d13;
+  background:
+    linear-gradient(110deg, transparent 0 36%, rgba(255,249,225,.78) 46%, transparent 57%) center / 100% 68% no-repeat,
+    linear-gradient(90deg, transparent 0 10%, #f0d8a5 10% 88%, transparent 88%) center / 100% 68% no-repeat,
+    linear-gradient(180deg, #8c3044, #45131f 72%);
+  border-color: #b96b76;
+  box-shadow: inset 0 4px rgba(255,255,255,.09), inset 0 -5px rgba(0,0,0,.16), 0 8px 22px rgba(92,16,39,.48), 0 0 14px rgba(226,182,111,.2);
+}
+
+@media (max-width: 700px) {
+  .room-page nav .nav-cta {
+    width: min(230px, calc(100% - 44px));
+    min-width: 0;
+    margin: 8px 36px 8px 0;
+    align-self: flex-start;
+  }
+}
+
