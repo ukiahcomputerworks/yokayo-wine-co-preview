@@ -1471,3 +1471,18 @@ footer { padding-top: 15px; padding-bottom: 15px; }
   }
 }
 
+/* The official Yokayo mark is a tall 98 x 144 vector; size it by height so it reads. */
+.site-header { min-height: 92px; padding-top: 4px; padding-bottom: 4px; }
+.brand img {
+  width: auto;
+  height: 84px;
+  max-height: none;
+  object-fit: contain;
+}
+
+@media (max-width: 700px) {
+  .site-header { min-height: 72px; }
+  .brand img { width: auto; height: 64px; max-height: none; }
+  nav { top: 72px; }
+}
+
