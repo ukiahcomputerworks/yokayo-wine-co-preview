@@ -6,7 +6,7 @@ const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 
 const pages = [
   {
-    route: 'about/about-yokayo', title: 'What We Do', kicker: 'About Yokayo', room: 'cellar/back-entrance.jpg',
+    route: 'about/about-yokayo', title: 'What We Do', kicker: 'About Yokayo', room: 'cellar/cellar-exit.jpg',
     deck: 'A modern custom crush operation on the Yokayo Bench, built to help wineries and growers make better wine without carrying every piece of infrastructure themselves.',
     body: `<h2>About Yokayo</h2><p class="lead">On the Yokayo Bench in northern Ukiah Valley sits a custom crush operation serving wineries and growers throughout California.</p><p>Since 2008, Yokayo Wine Company has focused on producing wine from grapes grown across the North Coast and throughout the state. The team brings together farmers, winemakers, vineyards, and a flexible production facility so programs both small and large can move from fruit to finished wine.</p><h2>Our expertise</h2><p>Yokayo can secure fruit through Pauli Family estate vineyards and grower partners, then make wine at its Ukiah facility just minutes from Highway 101. Clients may add volume to an existing brand, add a new variety without investing in more vineyards or tanks, or ask Yokayo to execute proprietary winemaking protocols.</p><p>When a crush pad breaks down or becomes backed up, Yokayo can process fruit and ship it later for finishing. Growers with unsold grapes can also use the custom crush operation.</p><div class="fact-grid"><article><strong>2008</strong><span>Yokayo established</span></article><article><strong>5 AVAs</strong><span>Pauli farming footprint</span></article><article><strong>101</strong><span>Minutes from the highway</span></article></div>`
   },
